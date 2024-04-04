@@ -400,6 +400,9 @@ img {
 	}
 	.to-the-left {
 		flex-direction: row;
+		img {
+			max-width: 50%;
+		}
 		.post-item-info {
 			width: 100%;
 			span {

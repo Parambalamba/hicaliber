@@ -24,7 +24,7 @@
                     "name": "title",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Input title of the posts element section",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -44,7 +44,7 @@
                     "name": "subtitle",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Input subtitle of the posts element section",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -66,8 +66,8 @@
             "name": "display_posts_per_row",
             "aria-label": "",
             "type": "radio",
-            "instructions": "",
-            "required": 1,
+            "instructions": "Choose how many posts dispalay in the row",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -93,8 +93,8 @@
             "name": "image_position",
             "aria-label": "",
             "type": "radio",
-            "instructions": "",
-            "required": 1,
+            "instructions": "Choose the position of featured image",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -118,8 +118,8 @@
             "name": "select_post_categories",
             "aria-label": "",
             "type": "radio",
-            "instructions": "",
-            "required": 1,
+            "instructions": "Choose categories to use for select posts (all or specific)",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -143,8 +143,8 @@
             "name": "select_specific_categories",
             "aria-label": "",
             "type": "taxonomy",
-            "instructions": "",
-            "required": 1,
+            "instructions": "Select specific categories of posts",
+            "required": 0,
             "conditional_logic": [
                 [
                     {
@@ -162,7 +162,7 @@
             "taxonomy": "category",
             "add_term": 1,
             "save_terms": 0,
-            "load_terms": 1,
+            "load_terms": 0,
             "return_format": "id",
             "field_type": "multi_select",
             "allow_null": 0,
@@ -176,8 +176,8 @@
             "name": "display_featured_posts",
             "aria-label": "",
             "type": "radio",
-            "instructions": "",
-            "required": 1,
+            "instructions": "Choose display recent posts or featured posts",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -185,8 +185,8 @@
                 "id": ""
             },
             "choices": {
-                "recent": "recent",
-                "featured": "featured"
+                "publish": "recent",
+                "future": "featured"
             },
             "default_value": "recent",
             "return_format": "value",
@@ -201,7 +201,7 @@
             "name": "add_section_classes",
             "aria-label": "",
             "type": "text",
-            "instructions": "Input custom css classes for section",
+            "instructions": "Input custom css classes for section (optional)",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -221,7 +221,7 @@
             "name": "add_section_id",
             "aria-label": "",
             "type": "text",
-            "instructions": "Add custom id to the section",
+            "instructions": "Add custom id to the section (optional)",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -254,5 +254,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712078751
+    "modified": 1712147217
 }

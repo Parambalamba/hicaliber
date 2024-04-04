@@ -17,13 +17,19 @@
 		"last 2 versions"
 	],
 	"dependencies": {
-		"bootstrap": "^5.3.1",
+		"@babel/core": "^7.24.4",
+		"@babel/highlight": "^7.24.2",
 		"@popperjs/core": "^2.11.8",
-		"jquery": "^3.7.0"
+		"bootstrap": "^5.3.1",
+		"cookie-parser": "^1.4.6",
+		"jquery": "^3.7.0",
+		"webpack": "^5.91.0"
 	},
 	"devDependencies": {
+		"@types/cookie-parser": "^1.4.7",
 		"@wordpress/scripts": "^26.11.0",
 		"path": "^0.12.7",
+		"webpack-cli": "^5.1.4",
 		"webpack-remove-empty-scripts": "^1.0.3"
 	}
 }

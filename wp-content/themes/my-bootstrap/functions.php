@@ -558,3 +558,40 @@ function my_bootstrap_scripts_loader() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'my_bootstrap_scripts_loader' );
+
+/**
+ * Change the output of Taxonomy field. It returns
+ * all terms from post_type Post and Custom Post types
+ */
+if ( is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
+	add_filter( 'acf/fields/taxonomy/query', 'my_acf_fields_taxonomy_query', 10, 3 );
+	function my_acf_fields_taxonomy_query( $args, $field, $post_id ) {
+		$taxes = ['category'];
+		$args = [
+			'public'    => true,
+			'_builtin'  => false
+		];
+		$output = 'names';
+		$operator = 'and';
+		$custom_taxes = get_taxonomies($args, $output, $operator);
+
+		if ( $custom_taxes )
+			$taxes = array_merge( $taxes, $custom_taxes );
+
+
+		// Show 40 terms per AJAX call.
+		$args['taxonomy'] = $taxes;
+
+		return $args;
+	}
+}
+
+add_filter('post_thumbnail_html', 'multi_format_thumbnail', 10, 5);
+function multi_format_thumbnail( $html, $post_id, $post_thumbnail_id, $size, $attr ){
+	if ( $post_thumbnail_id && !empty( $attachment = get_post( $post_thumbnail_id ) ) ) {
+		return $html;
+        } else {
+		$image = '<img src="'. get_bloginfo('template_url') .'/assets/images/no-image.png" >';
+        return $image;
+	}
+}

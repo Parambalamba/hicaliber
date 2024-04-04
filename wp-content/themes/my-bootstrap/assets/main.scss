@@ -365,3 +365,66 @@ img {
 		margin-top: 60px;
 	}
 }
+
+
+.posts {
+	display: grid;
+	grid-gap: 20px;
+	grid-auto-rows: 1fr;
+	.post-item {
+		display: flex;
+		flex: 1 1 auto;
+		gap: 10px;
+		border: 1px solid #000;
+		border-radius: 10px;
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+		}
+		.post-item-info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 10px;
+			a {
+				font-size: 24px;
+			}
+			span {
+				height: 40px;
+			}
+		}
+	}
+	.above-the-content {
+		flex-direction: column;
+	}
+	.to-the-left {
+		flex-direction: row;
+		.post-item-info {
+			width: 100%;
+			span {
+				height: 100%;
+			}
+		}
+	}
+}
+
+.one-in-row {
+	grid-template-columns: 1fr;
+	justify-items: center;
+	.post-item {
+		width: 50%;
+	}
+}
+
+.two-in-row {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.three-in-row {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.four-in-row {
+	grid-template-columns: repeat(4, 1fr);
+}
